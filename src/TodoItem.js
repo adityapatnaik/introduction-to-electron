@@ -26,7 +26,7 @@ const TodoItem = props =>{
                {
                   !isUpdate ? <div className="todotext">{item}</div>
                   : 
-                  <div style={{display:'flex',alignItems:'center',flex:'1',width:'100%'}}>
+                  <div style={{display:'flex',alignItems:'center',flex:'1',width:'100%',flexWrap: 'wrap'}}>
                     <input autoFocus className="todofield" placeholder="Enter to goback"
                     onChange={(event)=>{setUpdatedText(event.currentTarget.value)}}
                     onKeyUp={updateTodo}
