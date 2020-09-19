@@ -1,0 +1,159 @@
+.App {
+  display:flex;
+flex-direction: column;
+  position:fixed;
+  width:100%;
+  height:100%;
+  background-color:#102542;
+  color:white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  place-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.todolist{
+display:flex;
+flex-direction: column;
+width:100%;
+height:100%;
+/* border: white 0.001em solid; */
+border-radius: 1em;
+padding:1em;
+place-items: center;
+flex-flow:column wrap;
+overflow:auto;
+}
+
+.addbutton{
+font-size:2rem;
+flex: 0 1 0;
+align-self: start;
+border-radius: 0.2em;
+margin:0.5em;
+display:flex;
+}
+
+.addbutton:hover{
+  background-color: grey;
+}
+
+.todoitem{
+    display:flex;
+    flex-direction:column;
+    border: grey 0.0001em solid;
+    border-radius:0.5em;
+    margin:0.5em;
+    min-width:30%;
+    max-width:30%;
+    padding:0.5em;
+    word-break: break-word;
+    transition:transform 0.2s;
+    transition-timing-function: ease;
+}
+
+.todoitem:hover{
+  transform: scale(1.1,1.1);
+  background-color:  #3c6e71 ;
+}
+
+.todotext{
+  margin-left: 0.5em;
+}
+
+.newtodofield{
+position:fixed;
+bottom:0;
+width:100%;
+display:flex;
+background-color: #3c6e71;
+place-items: center;
+}
+
+.inputfield{
+width:100%;
+height:4em;
+background-color:#3c6e71;
+color:white;
+font-size: 1.3em;
+outline:none;
+border:none;
+margin-left:1em;
+/* padding:0em 1em; */
+}
+
+.todofield{
+  outline:none;
+  border:none;
+  background: transparent;
+  color:white;
+  /* flex:1 1 0; */
+  display:flex;
+  width:100%;
+  font-size: 1em;
+  margin-left:0.5em;
+}
+
+.todo-options{
+  display:flex;
+  margin-left:auto;
+  place-items:center;
+  margin-top:auto;
+  flex-wrap:wrap;
+  font-size:1.5rem;
+}
+
+::-webkit-input-placeholder { /* Edge */
+  color:rgb(190, 190, 190);
+}
+
+.go{
+margin-right:0.5em;
+right:5%;
+top:30%;
+font-size:2em;
+}
+
+#gobutton{
+ font-size:1.3em; 
+ margin-left:auto;
+}
+
+
+.burger{
+font-size:1.5em;
+display:flex;
+}
+
+*{
+ box-sizing: border-box;
+}
+
+html,body{
+  margin:0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.shadow {
+  -webkit-box-shadow: 1px 2px 1px 2px black;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    1px 2px 1px 2px black;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         1px 1px 10px 1px black;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .todoitem{
+    min-width: 90%;
+  }
+  
+  .todolist{
+    flex-flow: column;
+  }
+}
