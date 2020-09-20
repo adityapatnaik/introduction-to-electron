@@ -37,7 +37,9 @@ useEffect(()=>{
   
 
   const pushNewTodo = (event) =>{
-      if(event.key==="Enter"){
+    console.log("entering",event.currentTarget.id)
+      if(event.key==="Enter" || event.currentTarget.id==="go"){
+        console.log("entering in")
         setIsEdit(!isEdit)
         if(textfield!==""){
           todo.push(textfield)
@@ -69,7 +71,7 @@ useEffect(()=>{
               onChange={(event)=>{setTextField(event.currentTarget.value)}}
              onKeyUp = {pushNewTodo}
               />
-               <MdArrowForward className="go" onClick={pushNewTodo}/>
+               <MdArrowForward id="go" className="go" onClick={pushNewTodo}/>
              </div>
          }
       </div>
