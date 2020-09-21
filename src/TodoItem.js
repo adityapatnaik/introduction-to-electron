@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import {MdAdd,MdDehaze,MdArrowForward,MdDone,MdClose,MdEdit} from 'react-icons/md'
+import {MdDehaze,MdArrowForward,MdDone,MdClose,MdEdit} from 'react-icons/md'
 
 const TodoItem = props =>{
   const {item,index,setTrigger,setTodo} = props
