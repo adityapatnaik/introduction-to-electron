@@ -37,9 +37,7 @@ useEffect(()=>{
   
 
   const pushNewTodo = (event) =>{
-    console.log("entering",event.currentTarget.id)
-      if(event.key==="Enter" || event.currentTarget.id==="go"){
-        console.log("entering in")
+      if(event.key==="Enter" || event.currentTarget.id==="go"){ 
         setIsEdit(!isEdit)
         if(textfield!==""){
           todo.push(textfield)

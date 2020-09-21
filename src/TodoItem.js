@@ -24,7 +24,7 @@ const TodoItem = props =>{
               <div style={{display:'flex',alignItems:'center',justifyContent:'flex-start'}}> 
                <span className="burger"><MdDehaze /></span>
                {
-                  !isUpdate ? <div className="todotext">{item}</div>
+                  !isUpdate ? <div className="todotext" style={isStrike ? {textDecoration:'line-through'}:{}}>{item}</div>
                   : 
                   <div style={{display:'flex',alignItems:'center',flex:'1',width:'100%',flexWrap: 'wrap'}}>
                     <input autoFocus className="todofield" placeholder="Enter to goback"
